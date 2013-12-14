@@ -9,8 +9,8 @@ module.exports = (grunt) ->
         dest: 'chrome-app/lib/pomodoro.min.js'
 
     watch:
-      files: 'src/*.coffee'
-      tasks: ['test','compile']
+      files: ['src/*.coffee','chrome-app/**','!chrome-app/lib/**']
+      tasks: ['test','compile','launch']
       options:
         livereload:
           port: 9000
@@ -34,6 +34,9 @@ module.exports = (grunt) ->
       browserify:
         cmd: 'browserify -t coffeeify src/*.coffee > chrome-app/lib/pomodoro.js'
 
+      runPomodoro:
+        cmd: 'run-pomodoro.sh'
+
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -42,3 +45,4 @@ module.exports = (grunt) ->
   grunt.registerTask 'default', ['watch']
   grunt.registerTask 'compile', ['bgShell:browserify','uglify']
   grunt.registerTask 'test', ['bgShell:runMochaTests']
+  grunt.registerTask 'launch', ['bgShell:runPomodoro']
