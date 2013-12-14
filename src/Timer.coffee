@@ -17,7 +17,7 @@ class Timer extends EventEmiter
   start: (time)->
     @remainingTime = time || @remainingTime
     console.log "Timer.start()", arguments
-    expect(running).to.be.false
+    throw new Error("The timer has already started") if running
     @emit "start"
     console.log "Tick #{@remainingTime}"
     @timerHandler = setInterval(
