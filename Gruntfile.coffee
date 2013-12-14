@@ -9,7 +9,7 @@ module.exports = (grunt) ->
         dest: 'chrome-app/lib/pomodoro.min.js'
 
     watch:
-      files: ['src/*.coffee','chrome-app/**','!chrome-app/lib/**']
+      files: ['src/*.coffee','tests/*.coffee','chrome-app/**','!chrome-app/lib/**']
       tasks: ['test','compile','launch']
       options:
         livereload:
