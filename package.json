@@ -1,0 +1,31 @@
+{
+  "name": "pomodoro-timer",
+  "version": "0.0.1",
+  "description": "Pomodoro Timer based on the pomodoro technique is a time management method for tasks.",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dreamtech/pomodoro.git"
+  },
+  "keywords": [
+    "timer",
+    "pomodoro",
+    "tasks",
+    "productivity"
+  ],
+  "author": "Dream{Tech}",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/dreamtech/pomodoro/issues"
+  },
+  "homepage": "https://github.com/dreamtech/pomodoro",
+  "dependencies": {
+    "chai": "~1.8.1"
+  }
+}
