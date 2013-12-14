@@ -4,7 +4,7 @@
     "version": "0.1",
     "app": {
         "background": {
-            "scripts": ["lib/index.js"]
+            "scripts": ["index.js"]
         }
     }
 }
