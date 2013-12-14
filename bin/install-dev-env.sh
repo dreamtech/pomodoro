@@ -15,5 +15,5 @@ sudo n stable
 
 sudo npm install -g mocha
 sudo npm install -g coffee-script
-sudo npm install -g grunt
+sudo npm install -g grunt-cli
 sudo npm install -g browserify

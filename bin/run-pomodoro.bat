@@ -1,0 +1,1 @@
+start chrome --load-and-launch-app=%POMODORO_PATH%/chrome-app
