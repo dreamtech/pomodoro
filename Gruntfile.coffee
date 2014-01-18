@@ -25,14 +25,14 @@ module.exports = (grunt) ->
 
       runMochaTests:
         cmd: 'echo "|- - - Running Unit tests - - -|";'+
-             'mocha --compilers coffee:coffee-script --reporter spec tests/*'
+             'mocha --compilers coffee:coffee-script --reporter spec src/main.coffee tests/*'
         done: (err, stdout)->
           console.log '|- - - Finnished running Unit tests - - -|'
           if (err)
             console.error err
 
       browserify:
-        cmd: 'browserify -t coffeeify src/*.coffee > chrome-app/lib/pomodoro.js'
+        cmd: 'browserify -t coffeeify src/main.coffee src/*.coffee > chrome-app/lib/pomodoro.js'
 
       runPomodoro:
         cmd: 'run-pomodoro.sh'
